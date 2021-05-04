@@ -1,0 +1,22 @@
+{
+  "name": "caesar-cipher",
+  "version": "1.0.0",
+  "description": "Nodejs Caesar cipher CLI tool",
+  "main": "cctool.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexeyParfimovich/rsschool-caesar-cipher.git"
+  },
+  "author": "AlexeyParfimovich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexeyParfimovich/rsschool-caesar-cipher/issues"
+  },
+  "homepage": "https://github.com/AlexeyParfimovich/rsschool-caesar-cipher#readme",
+  "dependencies": {
+    "commander": "^7.2.0"
+  }
+}
