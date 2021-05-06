@@ -1,5 +1,5 @@
 const options = require('./src/options').options;
-//console.log(options);
+console.log(options);
 
 //console.log('Trying to create Input stream:');
 const readable = require('./src/rwstreams').createReadable(options.input);
