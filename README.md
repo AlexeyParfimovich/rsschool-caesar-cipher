@@ -21,12 +21,12 @@ CLI tool accepts 4 options (short alias and full name):
 
 Options details:
 
-- Action (encode/decode) and the Shift are required;
-- If the input file is missed - Stdin is used as an input source;
-- If the output file is missed - Stdout is used as an output destination;
-- If the input and/or output file is given but doesn't exist or you can't read it (e.g. because of permissions or it is a directory) - human-friendly error will be printed in stderr;
-- If passed params are fine the output (file or stdout) сontains encoded/decoded content of input (file or stdin);
-- For encoding/decoding use only the English alphabet, all other characters keep untouched;
+- Оptions parameters are specified separated by a spaces without additional characters (=,>, etc.)
+- Action (-a, --action <type>) and the Shift (-s, --shift <number>) are required;
+- If the Input (-i, --input) is missed - Stdin is used as an input source;
+- If the Output (-o, --output) is missed - Stdout is used as an output destination;
+- If passed params are fine the Output (file or stdout) сontains encoded/decoded content of Input (file or stdin);
+- For encoding/decoding only the English alphabet is used, all other characters keet untouched;
 - The tool works correctly with any integer values of Shift (-s, --shift).
 
 Usage example:
