@@ -1,13 +1,13 @@
+/*
+  Implementation of the Caesar cipher algorithm to encode/decode input to output chars streams managing by CLI options
+*/
 const options = require('./src/options').options;
-console.log(options);
+//console.log(options);
 
-//console.log('Trying to create Input stream:');
 const readable = require('./src/rwstreams').createReadable(options.input);
 
-//console.log('Trying to create Output stream:');
 const writable = require('./src/rwstreams').createWritable(options.output);
 
-//console.log('Trying to create Transform stream:');
 const transform = require('./src/transforms').createCCTransform(options.action, options.shift);
 
 const { pipeline } = require('stream');

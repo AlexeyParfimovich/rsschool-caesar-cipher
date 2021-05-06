@@ -1,3 +1,6 @@
+/*
+  Transform class with Caesar cipher encode/decode algorithm
+*/
 class СaesarCipherTransform extends require('stream').Transform {
   action = undefined;
   shift = undefined;

@@ -1,3 +1,6 @@
+/*
+  Create input and output streams in depend on recieved Path value
+*/
 const { W_OK } = require('constants');
 const fs = require('fs');
 

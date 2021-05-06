@@ -10,18 +10,18 @@ program
   .description('Nodejs Caesar cipher CLI tool')
   .requiredOption('-a, --action <type>', `an action ${actionType.join('/')}`, parseAction)
   .requiredOption('-s, --shift <number>', 'a shift value', parseShift)
-  .option('-i, --input <path>', 'an input file')
-  .option('-o, --output <path>', 'an output file');
+  .option('-i, --input <path>', 'an input file', parseOption)
+  .option('-o, --output <path>', 'an output file', parseOption);
 
 if(process.argv.length < 3) program.help();
 
 exports.options = program.parse().opts();
 
 /*
-  Parsing command line argument values
+  functions for parsing command line argument values
 */
 function parseAction(value) {
-  const parsedValue = value.toLowerCase();
+  const parsedValue = value.toLowerCase().replace(/=/,'');
   if(actionType.indexOf(parsedValue) < 0) {
     throw new comander.InvalidOptionArgumentError(`${actionType.join('/')} expected`);
   }
@@ -29,9 +29,13 @@ function parseAction(value) {
 }
 
 function parseShift(value) {
-  const parsedValue = parseInt(value,10);
+  const parsedValue = parseInt(value.replace(/=/,''),10);
   if(isNaN(parsedValue)){
     throw new comander.InvalidOptionArgumentError('Integer number expected');
   }
   return parsedValue;
+}
+
+function parseOption(value) {
+  return value.replace(/=/,'');
 }
