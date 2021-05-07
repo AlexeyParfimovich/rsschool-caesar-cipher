@@ -13,7 +13,7 @@ program
   .option('-i, --input <path>', 'an input file', parseOption)
   .option('-o, --output <path>', 'an output file', parseOption);
 
-if(process.argv.length < 3) program.help();
+//if(process.argv.length < 3) program.help();
 
 exports.options = program.parse().opts();
 

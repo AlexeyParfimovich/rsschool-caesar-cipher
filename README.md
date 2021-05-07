@@ -9,7 +9,7 @@ Implement CLI tool that will encode and decode a text by https://en.wikipedia.or
 3. Unzip downloaded archive into a folder on you local storage
 4. Go to the unzipped folder 
 5. Run `npm install` to install all dependencies
-6. Run `npm cctool [-options]` in command line
+6. Run `npm cctool [-options]`
 
 ### CLI tool options (short alias and full name):
 - -a, --action <type>   : an action encode/decode
@@ -17,6 +17,8 @@ Implement CLI tool that will encode and decode a text by https://en.wikipedia.or
 - -i, --input <path>    : an input file
 - -o, --output <path>   : an output file
 - -h, --help            : display help for command
+
+> Press Ctrl^C to stop the application if it was started without specified input file
 
 ## Options details:
 

@@ -20,7 +20,7 @@ class СaesarCipherTransform extends require('stream').Transform {
       const offset = (ch === ch.toUpperCase()) ? 65 : 97;
       // Calculate encripted/decripted code of a char
       let charCode = (ch.charCodeAt(0) - offset + this.shift) % 26;
-      // Correct char's code depending its sign
+      // Correct char's code depending on its sign
       if(charCode < 0) charCode += 26;
       // Return a char form its code
       return String.fromCharCode(charCode + offset);
@@ -30,6 +30,4 @@ class СaesarCipherTransform extends require('stream').Transform {
   }
 };
 
-exports.createCCTransform = function createCCTransfrom(action, shift) {
-  return new СaesarCipherTransform(action, shift)
-};
+exports.createCCTransform = (action, shift) => new СaesarCipherTransform(action, shift);
